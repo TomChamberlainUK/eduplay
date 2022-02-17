@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Eduplay</title>
+		<meta charset="UTF-8">
+		<link rel="icon" type="image/png" href="images/favicon.png">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+		<script type="text/javascript" src="javascript/script.js"></script>
+	</head>
+	<body>
+		<div id="container">
+			<div id="black-transition">
+			</div>
+			<div id="background-fade">
+			</div>
+			<div id="message-popup">
+				<div class="message-box">
+					<div id="popup-close">
+						<img src="images/exit.png" alt="exit">
+					</div>
+					<p id="credits">App designed and created by Tom Chamberlain for Leeds Metropolitan University.<br>Creative Media Technology - Interactive Media Design</p>
+					<div id="hints-popup">
+						<p id="lvl01-hint">Just follow the instructions and tap on the objects. A parasol is like an umbrella but used to block the sun. Pictures with a white outline are mostly interactive so look out for them!</p>
+						<p id="lvl02-hint">Drag the correct objects when they appear to the boxes on the left. Remember what you learned in the last game, and if you're struggling with which gas is correct then here's a hint: We breathe it out!</p>
+						<p id="lvl06-hint">A quiz with hints to the answers? Now that wouldn't be very educational... You're on your own for this one!</p>
+					</div>
+					<div id="level-2popup">
+						<img id="char02b" src="images/char02b.png" class="char02" alt="char02">
+						<img id="char02a" src="images/char02a.png" class="char02" alt="char02">
+						<img id="char02c" src="images/char02c.png" class="char02" alt="char02">
+					</div>
+					<div id="level-6popup">
+						<p id="q1-a">Correct!<br>Plants harness solar energy which is used in photosynthesis</p>
+						<p id="q1-b">Incorrect!<br>Have you been paying attention? Plants harness solar energy which is used in photosynthesis</p>
+						<p id="q2-a">Correct!<br>Oxygen and energy are produced in photosynthesis</p>
+						<p id="q2-b">Incorrect!<br>This is a reactant of photosynthesis, oxygen and energy are the products</p>
+						<p id="q3-a">Correct!<br>Plants use chlorophyll to absorb energy from the sun</p>
+						<p id="q3-b">Incorrect!<br>Plants use chlorophyll to absorb energy from the sun</p>
+						<p id="q4-a">Correct!<br>Chlorophyll are located in chloroplasts in the leaves of plants</p>
+						<p id="q4-b">Incorrect!<br>Chlorophyll are located in chloroplasts in the leaves of plants</p>
+						<p id="q5-a">Correct!<br>Plants sustain life on earth by providing energy for herbivores and regulating oxygen levels in the atmosphere</p>
+						<p id="q5-b">Incorrect!<br>Plants sustain life on earth by providing energy for herbivores and regulating oxygen levels in the atmosphere</p>
+					</div>
+				</div>
+			</div>
+			<div id="menu">
+				<div id="menu-backdrop">
+				</div>
+				<h2 id="progress-title">Progress</h2>
+				<div id="progress-bar">
+					<img src="images/progress_bar.png" alt="progressbar">
+					<img id="progress1" class="hidden" src="images/progress_1.png" alt="progress1">
+					<img id="progress2" class="hidden" src="images/progress_2.png" alt="progress2">
+					<img id="progress3" class="hidden" src="images/progress_2.png" alt="progress3">
+					<img id="progress4" class="hidden" src="images/progress_2.png" alt="progress4">
+					<img id="progress5" class="hidden" src="images/progress_2.png" alt="progress5">
+					<img id="progress6" class="hidden" src="images/progress_3.png" alt="progress6">
+				</div>
+				<div id="menu-btn" class="small-btn">
+					<h2>Menu</h2>
+				</div>
+				<div id="hint-btn" class="small-btn">
+					<h2>Hint</h2>
+				</div>
+				<div id="reset-btn" class="small-btn">
+					<h2>Reset</h2>
+				</div>
+				<div id="expand">
+				</div>
+			</div>
+			<div id="instructions">
+				<img id="half-fade" src="images/half_fade.png" alt="halffade">
+				<div id="worm">
+					<img src="images/worm.png" alt="worm">
+				</div>
+				<div id="chatbox">
+					<img id="chat-tail" src="images/chat_tail.png" alt="chattail">
+					<p id="lvl01-msg01">That plant over there's not looking too healthy, lets see if we can help him out</p>
+					<p id="lvl01-msg02">Plants need sunlight to photosynthesise, try tapping that parasol to let some sunlight reach him</p>
+					<p id="lvl01-msg03">He's looking better already! Plants also need water in photosynthesis, tap the watering can over there and see if that helps</p>
+					<p id="lvl01-msg04">Well done, he's looking much healthier now!</p>
+					
+					<p id="lvl02-msg01">Lets look into how photosynthesis works now. There are 3 reactants in photosynthesis, we've already added sunlight for you</p>
+					<p id="lvl02-msg02">One of these gases is a reactant, drag the correct one into the upper box on the left</p>
+					<p id="lvl02-msg03">One of these liquids is also a reactant, drag the correct one into the lower box on the left</p>
+					<p id="lvl02-msg04a">That's right! photosynthesis requires carbon dioxide, water and sunlight</p>
+					<p id="lvl02-msg04b">Oops, that's wrong! Try again</p>
+					<p id="lvl02-msg05">Plants convert this into oxygen and energy to grow</p>
+					<p id="lvl02-msg06">That's it for this lesson!</p>
+					
+					<p id="lvl06-msg01">Time to test your knowledge on photosynthesis!</p>
+					<p id="lvl06-msg02">Question 1: Photosynthesis harnesses energy from what?</p>
+					<p id="lvl06-msg03">Question 2: Which of these is a product of photosynthesis?</p>
+					<p id="lvl06-msg04">Question 3: Plants absorb sunlight with what?</p>
+					<p id="lvl06-msg05">Question 4: Chlorophyll are located where?</p>
+					<p id="lvl06-msg06">Question 5: Plants sustain life on Earth by?</p>
+					<p id="lvl06-msg07">Quiz complete!</p>
+					<p id="footnote">Tap To Continue</p>
+				</div>
+				<div id="quiz-answers">
+						<div id="quiz-a1" class="quiz-a">
+							<p id="quiz-q1a1">Wind</p>
+							<p id="quiz-q2a1">Oxygen</p>
+							<p id="quiz-q3a1">Solar Panels</p>
+							<p id="quiz-q4a1">Chloroform</p>
+							<p id="quiz-q5a1">Providing energy for soil and regulating hydrogen levels</p>
+						</div>
+						<div id="quiz-a2" class="quiz-a">
+							<p id="quiz-q1a2">The sun</p>
+							<p id="quiz-q2a2">Carbon dioxide</p>
+							<p id="quiz-q3a2">Pollen</p>
+							<p id="quiz-q4a2">Chlorine</p>
+							<p id="quiz-q5a2">Consuming animals and regulating nitrogen levels</p>
+						</div>
+						<div id="quiz-a3" class="quiz-a">
+							<p id="quiz-q1a3">Batteries</p>
+							<p id="quiz-q2a3">Water</p>
+							<p id="quiz-q3a3">Soil</p>
+							<p id="quiz-q4a3">Chloramphenicol</p>
+							<p id="quiz-q5a3">Transferring energy when consumed and regulating oxygen levels</p>
+						</div>
+						<div id="quiz-a4" class="quiz-a">
+							<p id="quiz-q1a4">Nuclear power</p>
+							<p id="quiz-q2a4">Sunlight</p>
+							<p id="quiz-q3a4">Chlorophyll</p>
+							<p id="quiz-q4a4">Chloroplasts</p>
+							<p id="quiz-q5a4">Working at their local supermarket</p>
+						</div>
+					</div>
+			</div>
+			<div id="pages">
+				<div id="splash-screen" class="active-page2">
+					<img id="eduplay-logo" src="images/eduplay_logo.png" alt="logo">
+				</div>
+				<div id="main-menu">
+					<img src="images/title_screen.png" alt="titlescreen">
+					<div id="start-btn" class="big-btn">
+						<h1>Start</h1>
+					</div>
+					<div id="credits-btn" class="big-btn">
+						<h1>Credits</h1>
+					</div>
+				</div>
+				<div id="level-select">
+					
+					
+					
+					<div id="ls-box">
+						<div id="lvl01-info" class="lvl-info visible">
+							<h1 class="lvl-title">Level 01</h1>
+							<div class="lvl-icon">
+								<img id="lvl01-icon" src="images/char02c.png" alt="lvl1icon">
+							</div>
+							<p class="lvl-description">This plant's looking a bit under the weather, help to brighten its day while learning the fundamentals of photosynthesis</p>
+						</div>
+						<div id="lvl02-info" class="lvl-info hidden">
+							<h1 class="lvl-title">Level 02</h1>
+							<div class="lvl-icon">
+								<img id="lvl02-icon" src="images/bottles-mini.png" alt="lvl2icon">
+							</div>
+							<p class="lvl-description">Apply your knowledge of photosynthesis into this equation</p>
+						</div>
+						<div id="lvl03-info" class="lvl-info hidden">
+							<h1 class="lvl-title">Level 03</h1>
+							<div class="lvl-icon">
+								<img class="lvln-icon" src="images/worm-minibuild.png" alt="lvl3icon">
+							</div>
+							<p class="lvl-description">Sorry this level's still under construction!</p>
+						</div>
+						<div id="lvl04-info" class="lvl-info hidden">
+							<h1 class="lvl-title">Level 04</h1>
+							<div class="lvl-icon">
+								<img class="lvln-icon" src="images/worm-minibuild.png" alt="lvl4icon">
+							</div>
+							<p class="lvl-description">Sorry this level's still under construction!</p>
+						</div>
+						<div id="lvl05-info" class="lvl-info hidden">
+							<h1 class="lvl-title">Level 05</h1>
+							<div class="lvl-icon">
+								<img class="lvln-icon" src="images/worm-minibuild.png" alt="lvl5icon">
+							</div>
+							<p class="lvl-description">Sorry this level's still under construction!</p>
+						</div>
+						<div id="lvl06-info" class="lvl-info hidden">
+							<h1 class="lvl-title">Level 06</h1>
+							<div class="lvl-icon">
+								<img id="lvl06-icon" src="images/worm-mini.png" alt="lvl6icon">
+							</div>
+							<p class="lvl-description">Test your knowledge and take the photosynthesis quiz! It's best to complete the other levels before this one</p>
+						</div>
+						<div id="select-level" class="big-btn">
+							<h1>Start</h1>
+						</div>
+					</div>
+					<div id="ls-levels">
+						<div id="lvl01" class="lvl-btn selected">
+							<div id="lvl01-ind" class="lvl-ind"></div>
+						</div>
+						<div id="lvl02" class="lvl-btn">
+							<div id="lvl02-ind" class="lvl-ind"></div>
+						</div>
+						<div id="lvl03" class="lvl-btn">
+							<div id="lvl03-ind" class="lvl-ind lvl-none"></div>
+						</div>
+						<div id="lvl04" class="lvl-btn">
+							<div id="lvl04-ind" class="lvl-ind lvl-none"></div>
+						</div>
+						<div id="lvl05" class="lvl-btn">
+							<div id="lvl05-ind" class="lvl-ind lvl-none"></div>
+						</div>
+						<div id="lvl06" class="lvl-btn">
+							<div id="lvl06-ind" class="lvl-ind"></div>
+						</div>
+					</div>
+					<div id="ls-highlight"></div>
+					
+					
+					
+				</div>
+				<div id="level-1">
+					<img src="images/level01bg.png" alt="lvl1bg">
+					<div id="char01">
+						<div id="char01a">
+							<img src="images/char01_leftleafback.png" class="char01-leftleafback leafbouncebackc" alt="c1llb">
+							<img src="images/char01_rightleafback.png" class="char01-rightleafback leafbouncebackc" alt="c1rlb">
+							<img src="images/char01a_stem.png" class="char01-stem" alt="c1s">
+							<img src="images/char01a_leftleaf.png" class="char01-leftleaf leafbouncec" alt="c1ll">
+							<img src="images/char01a_rightleaf.png" class="char01-rightleaf leafbouncec" alt="c1rl">
+						</div>
+						<div id="char01b">
+							<img src="images/char01_leftleafback.png" class="char01-leftleafback leafbouncebackb" alt="c1llb">
+							<img src="images/char01_rightleafback.png" class="char01-rightleafback leafbouncebackb" alt="c1rlb">
+							<img src="images/char01b_stem.png" class="char01-stem" alt="c1s">
+							<img src="images/char01b_leftleaf.png" class="char01-leftleaf leafbounceb" alt="c1ll">
+							<img src="images/char01b_rightleaf.png" class="char01-rightleaf leafbounceb" alt="c1rl">
+						</div>
+						<div id="char01c">
+							<img src="images/char01_leftleafback.png" class="char01-leftleafback leafbouncebacka" alt="c1llb">
+							<img src="images/char01_rightleafback.png" class="char01-rightleafback leafbouncebacka" alt="c1rlb">
+							<img src="images/char01c_stem.png" class="char01-stem" alt="c1s">
+							<img src="images/char01c_leftleaf.png" class="char01-leftleaf leafbouncea" alt="c1ll">
+							<img src="images/char01c_rightleaf.png" class="char01-rightleaf leafbouncea" alt="c1rl">
+						</div>
+					</div>
+					<div id="parasol">
+						<img id="parasol-shade" src="images/parasol_shade.png" alt="parasolshade">
+						<img id="parasol-open" src="images/parasol_open.png" alt="parasolopen">
+						<img id="parasol-closed" src="images/parasol_closed.png" class="hidden" alt="parasolclosed">
+					</div>
+					<div id="watering-can">
+						<img id="watering-cana" src="images/watering_cana.png" alt="wateringcan">
+						<img id="watering-canb" src="images/watering_canb.png" class="hidden" alt="wateringcan">
+					</div>
+				</div>
+				<div id="level-2">
+					<div id="reactant01" class="brown-square droppable1">
+						<div id="reactant01-imagea" class="reactant01-image hidden">
+							<img src="images/balloon01s.png" alt="balloon">
+						</div>
+						<div id="reactant01-imageb" class="reactant01-image hidden">
+							<img src="images/balloon02s.png" alt="balloon">
+						</div>
+						<div id="reactant01-imagec" class="reactant01-image hidden">
+							<img src="images/balloon03s.png" alt="balloon">
+						</div>
+					</div>
+					<div id="reactant02" class="brown-square droppable2">
+						<div id="reactant02-imagea" class="reactant02-image hidden">
+							<img src="images/bottle01s.png" alt="bottle">
+						</div>
+						<div id="reactant02-imageb" class="reactant02-image hidden">
+							<img src="images/bottle02s.png" alt="bottle">
+						</div>
+						<div id="reactant02-imagec" class="reactant02-image hidden">
+							<img src="images/bottle03s.png" alt="bottle">
+						</div>
+					</div>
+					<div id="product01" class="brown-square">
+						<img src="images/balloon02s.png" id="product01a" alt="balloon">
+					</div>
+					<div id="product02" class="brown-square">
+						<img src="images/energy01s.png" id="product02a" alt="energy">
+					</div>
+					<div id="plus01" class="plus">
+					</div>
+					<div id="plus02" class="plus">
+					</div>
+					<div id="sunlight">
+					</div>
+					<div id="gases">
+						<div id="carbon-dioxide" class="balloon draggable1">
+						</div>
+						<div id="oxygen" class="balloon draggable1">
+						</div>
+						<div id="hydrogen" class="balloon draggable1">
+						</div>
+					</div>
+					<div id="liquids">
+						<div id="acid" class="bottle draggable2">
+						</div>
+						<div id="water" class="bottle draggable2">
+						</div>
+						<div id="oil" class="bottle draggable2">
+						</div>
+					</div>
+				</div>
+				<div id="level-3">
+					level 3
+				</div>
+				<div id="level-4">
+					level 4
+				</div>
+				<div id="level-5">
+					level 5
+				</div>
+				<div id="level-6">
+				</div>
+				<div id="end-game">
+					end game
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
